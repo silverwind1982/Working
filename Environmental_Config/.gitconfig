@@ -1,0 +1,12 @@
+[user]
+	name = name.first
+	email = name.first@company.com
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = true
+[core]
+	editor = vim
+[commit]
+	template = ./.gitmessage.txt

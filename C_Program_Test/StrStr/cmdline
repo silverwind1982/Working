@@ -1,0 +1,1 @@
+BOOT_IMAGE=/boot/vmlinuz-4.14.4 console=tty1 console=ttyS1,115200n8 modprobe.blacklist=ixgbe root=/dev/sda3 net.ifnames=0 loglevel=4 q_platform=IX7 
