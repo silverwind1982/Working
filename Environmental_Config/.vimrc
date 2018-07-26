@@ -7,9 +7,9 @@ set tabstop=2
 set expandtab
 set incsearch
 set number
-set hls 
+set hls
 set nocompatible
-set guifontset=8x16,kc15f,-*-16-*-big5-0 
+set guifontset=8x16,kc15f,-*-16-*-big5-0
 set cursorline
 set autoread
 "set fenc=big5 enc=big5 tenc=utf8

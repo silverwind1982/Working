@@ -23,7 +23,7 @@ int main(int argc, char* argv[]) {
     }
     pclose(pfile);
   }
-  
+
   printf("image: %s, platform: %s.\n", image, platName);
   printf("\n\n");
 
