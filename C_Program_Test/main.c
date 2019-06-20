@@ -2,11 +2,8 @@
 
 int main(int argc, char* argv[]) {
 
-  char input[6] = {'\0'};
-
-  scanf("%5s", input);
-
-  printf("%s\n", input);
+  printf("7 % 1 = %d\n", 7 % 1);
+  printf("\n\n");
 
   return 0;
 }
