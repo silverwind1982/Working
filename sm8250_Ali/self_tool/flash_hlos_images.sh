@@ -10,19 +10,19 @@ function show_info()
     echo -e "\033[32m$1\033[0m"
 }
 
-if [ -z "$1" ]; then
-    src_dir="../../sm8250_Ali/self_data/hlos_images/"
+if [ ! -z "$1" ]; then
+    slot="$1"
+fi
+
+if [ -z "$2" ]; then
+    src_dir="../../../../sm8250_Ali/self_data/hlos_images/"
 else
-    src_dir="$1"
+    src_dir="$2"
 fi
 
 if [ ! -d "${src_dir}" ]; then
     show_error "${src_dir} is not found"
     exit -1
-fi
-
-if [ ! -z "$2" ]; then
-    slot="$2"
 fi
 
 

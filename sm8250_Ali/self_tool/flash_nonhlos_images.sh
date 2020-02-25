@@ -26,29 +26,27 @@ if [ ! -d "${src_dir}" ]; then
 fi
 
 
-partitions_a="persist system_a systemrw cache userdata
-              xbl_a xbl_config_a ddr aop_a tz_a
+partitions_a="xbl_a xbl_config_a ddr aop_a tz_a
               hyp_a modem_a bluetooth_a abl_a dsp_a
-              keymaster_a boot_a cmnlib_a cmnlib64_a devcfg_a
+              keymaster_a cmnlib_a cmnlib64_a devcfg_a
               qupfw_a uefisecapp_a multiimgoem_a featenabler_a imagefv_a
               apdp spunvm logfs"
 
-images_a=("sm8250-persist.ext4" "sm8250-sysfs.ext4" "sm8250-systemrw.ext4" "sm8250-cache.ext4" "sm8250-usrfs.ext4"
-          "xbl.elf" "xbl_config.elf" "zeros_5sectors.bin" "aop.mbn" "tz.mbn"
+images_a=("xbl.elf" "xbl_config.elf" "zeros_5sectors.bin" "aop.mbn" "tz.mbn"
           "hyp.mbn" "NON-HLOS.bin" "BTFM.bin" "abl.elf" "dspso.bin"
-          "km4.mbn" "sm8250-boot.img" "cmnlib.mbn" "cmnlib64.mbn" "devcfg.mbn"
+          "km4.mbn" "cmnlib.mbn" "cmnlib64.mbn" "devcfg.mbn"
           "qupv3fw.elf" "uefi_sec.mbn" "multi_image.mbn" "featenabler.mbn" "imagefv.elf"
           "apdp.mbn" "spunvm.bin" "logfs_ufs_8mb.bin")
 
 
-partitions_b="system_b xbl_b xbl_config_b aop_b tz_b
+partitions_b="xbl_b xbl_config_b aop_b tz_b
               hyp_b modem_b bluetooth_b abl_b dsp_b
-              keymaster_b boot_b cmnlib_b cmnlib64_b devcfg_b
+              keymaster_b cmnlib_b cmnlib64_b devcfg_b
               qupfw_b uefisecapp_b multiimgoem_b featenabler_b imagefv_b"
 
-images_b=("sm8250-sysfs.ext4" "xbl.elf" "xbl_config.elf" "aop.mbn" "tz.mbn"
+images_b=("xbl.elf" "xbl_config.elf" "aop.mbn" "tz.mbn"
           "hyp.mbn" "NON-HLOS.bin" "BTFM.bin" "abl.elf" "dspso.bin"
-          "km4.mbn" "sm8250-boot.img" "cmnlib.mbn" "cmnlib64.mbn" "devcfg.mbn"
+          "km4.mbn" "cmnlib.mbn" "cmnlib64.mbn" "devcfg.mbn"
           "qupv3fw.elf" "uefi_sec.mbn" "multi_image.mbn" "featenabler.mbn" "imagefv.elf")
 
 
