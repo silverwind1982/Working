@@ -22,6 +22,11 @@ function cp_file()
 
     if [ ! -f "${dst_file}" ]; then
         cp ${src_file} ${dst_file}
+        result=$?
+        if [ $result != 0 ]; then
+            show_error "cp ${src_file} ${dst_file} error"
+            exit -1
+        fi
         return
     fi
 
@@ -29,6 +34,11 @@ function cp_file()
     dst_md5=$(md5sum ${dst_file} | cut -d' ' -f1)
     if [ ${src_md5} != ${dst_md5} ]; then
         cp ${src_file} ${dst_file}
+        result=$?
+        if [ $result != 0 ]; then
+            show_error "cp ${src_file} ${dst_file} error"
+            exit -1
+        fi
     fi
 }
 

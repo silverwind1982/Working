@@ -24,6 +24,11 @@ function cp_partition_files()
         fi
 
 		cp ${src_dir}${image} ${dst_dir}
+        result=$?
+        if [ $result != 0 ]; then
+            show_error "cp ${src_dir}${image} ${dst_dir} error"
+            exit -1
+        fi
 	done
 
 
@@ -31,7 +36,7 @@ function cp_partition_files()
 }
 
 if [ -z "$1" ]; then
-    src_dir="../../sm8250_Ali/aibox/src/non-hlos/test_device/common/build/ufs/"
+    src_dir="../../../../sm8250_Ali/aibox/src/non-hlos/test_device/common/build/ufs/"
 else
     src_dir="$1"
 fi
@@ -42,7 +47,7 @@ if [ ! -d "${src_dir}" ]; then
 fi
 
 if [ -z "$2" ]; then
-    dst_dir="../../sm8250_Ali/self_data/partition_file/"
+    dst_dir="../../../../sm8250_Ali/self_data/partition_file/"
 else
     dst_dir="$2"
 fi
