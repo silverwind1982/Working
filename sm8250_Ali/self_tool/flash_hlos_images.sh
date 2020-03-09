@@ -26,7 +26,7 @@ if [ ! -d "${src_dir}" ]; then
 fi
 
 
-if [ ${slot} == "a" ] || [ -z ${slot} ]; then
+if [ -z ${slot} ] || [ ${slot} == "a" ]; then
     fastboot flash persist  ${src_dir}sm8250-persist.ext4
     fastboot flash cache    ${src_dir}sm8250-cache.ext4
     fastboot flash systemrw ${src_dir}sm8250-systemrw.ext4
@@ -37,7 +37,7 @@ if [ ${slot} == "a" ] || [ -z ${slot} ]; then
     fastboot flash alidata  ${src_dir}sm8250-alifs.ext4
 fi
 
-if [ ${slot} == "b" ] || [ -z ${slot} ]; then
+if [ -z ${slot} ] || [ ${slot} == "b" ]; then
     fastboot flash system_b ${src_dir}sm8250-sysfs.ext4
     fastboot flash boot_b   ${src_dir}sm8250-boot.img
 fi

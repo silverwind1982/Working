@@ -63,6 +63,10 @@ if [ ! -d "${dst_dir}" ]; then
 	mkdir ${dst_dir}
 fi
 
+cp ${src_dir}contents.xml ${dst_dir}
+
+cp ${src_dir}common/config/ufs/provision/provision_default.xml ${dst_dir}
+
 cp ${src_dir}aop_proc/build/ms/bin/AAAAANAZO/aop.mbn ${dst_dir}
 
 cp_file ${src_dir}boot_images/QcomPkg/SocPkg/8250/Bin/LAA/RELEASE/xbl.elf ${dst_dir}
