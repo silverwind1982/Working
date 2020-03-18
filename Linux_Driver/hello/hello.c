@@ -3,9 +3,14 @@
 
 MODULE_LICENSE("Dual BSD/GPL");
 
+extern void sub(void);
+
 static int hello_init(void)
 {
     printk(KERN_ALERT "driver loaded\n");
+
+    sub();
+
     return 0;
 }
 
