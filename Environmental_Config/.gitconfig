@@ -10,3 +10,5 @@
 	editor = vim
 [commit]
 	template = ./.gitmessage.txt
+[alias]
+    allclear=!sh -c 'git clean -xf && git clean -xffd'

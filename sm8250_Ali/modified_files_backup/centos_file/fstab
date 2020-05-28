@@ -11,5 +11,5 @@
 #
 
 # <file system>      <mount point>   <type>    <options>             <dump>  <pass>
-PARTLABEL=alidata    /media/AliData  auto      defaults              0       2
+PARTLABEL=alidata    /AliDisk        auto      defaults              0       2
 

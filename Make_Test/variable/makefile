@@ -1,0 +1,5 @@
+tarball:
+	name=$$(pwd | xargs basename); ver=$$(cat version); \
+    out=$${name}-$${ver}-src.tar.gz; cd ..; \
+    time tar -I pigz --exclude="$${name}/.*" -cvf $${out} $${name}/; \
+    mv $${out} $${name}/
