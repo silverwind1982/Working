@@ -1,5 +1,8 @@
 .phony=clean
 
+clean:
+	rm -f all aa bb cc
+
 all: aa bb cc
 	echo "this is target all"
 	touch all
@@ -15,7 +18,4 @@ bb:
 cc:
 	echo "this is target cc"
 	touch cc
-
-clean:
-	rm -f all aa bb cc
 
