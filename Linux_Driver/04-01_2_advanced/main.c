@@ -4,6 +4,12 @@
 MODULE_LICENSE("Dual BSD/GPL");
 
 extern void sub(void);
+extern void link_ok(void*);
+
+void external_sub(void)
+{
+    link_ok(NULL);
+}
 
 static int hello_init(void)
 {

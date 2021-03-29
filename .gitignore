@@ -1,8 +1,15 @@
 *.[oa]
 *~
-.*
-.ko
+*.ko
+*.cmd
+*.swp
+*.cache.mk
+.tmp_versions
+.xxx
+sample.mod.c
 myprog
+Module.symvers
+modules.order
 
 sm8250_Ali/self_data
 

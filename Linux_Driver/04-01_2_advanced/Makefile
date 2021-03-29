@@ -1,8 +1,8 @@
-obj-m := abc.o
+CFILES := main.c sub.c
 
-CFILES := hello.c sub.c
+obj-m := xyz.o
 
-abc-objs := $(CFILES:.c=.o)
+xyz-objs := $(CFILES:.c=.o)
 
 all:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules

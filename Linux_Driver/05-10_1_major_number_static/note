@@ -1,0 +1,11 @@
+1, Insert kernel module:
+    $ make
+    $ sudo insmod sample.ko
+
+2, Create related device node manually:
+    $ sudo mknod --mode=666 /dev/devtwo c `grep devone /proc/devices | awk '{print $1;};'` 0
+
+3, Execute user application to access the device node:
+    $ gcc simple.c -o ./myprog
+    $ ./myprog
+
