@@ -1,0 +1,12 @@
+0, Related files:
+    $ vim Makefile main.c note
+
+1, Insert kernel module:
+    $ make
+    $ sudo insmod xyz.ko
+
+2, Execute user application to access the device node:
+    $ cat /proc/sample
+    $ echo abcdefg > /proc/sample
+    $ cat /proc/sample
+

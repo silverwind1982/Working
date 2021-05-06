@@ -1,0 +1,8 @@
+1, Related files:
+    $ vim Makefile main.c note
+
+2, Insert kernel module:
+    $ make
+    build error: implicit declaration of function create_proc_entry
+    The above function is removed in linux kernel 3.10
+

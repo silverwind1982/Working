@@ -37,27 +37,35 @@ struct test4
 int main(int argc, char* argv[]) {
 
     test0 tt;
-    struct test1 aa;
-    /*struct test2 bb;
-    struct test3 cc;
-    struct test4 dd;*/
+    struct test1 aa1;
+    /*struct test2 aa2;
+    struct test3 aa3;
+    struct test4 aa4;*/
 
     printf("test1: %lu\ntest2: %lu\ntest3: %lu\ntest4: %lu\n",
             sizeof(struct test1), sizeof(struct test2), sizeof(struct test3), sizeof(struct test4));
 
 #if 0
-    tt.a = aa.a = 7;
-    tt.b = aa.b = 12;
-    tt.c = aa.c = 1;
+    tt.a = aa1.a = 7;
+    tt.b = aa1.b = 12;
+    tt.c = aa1.c = 1;
 #else
-    aa.a = tt.a = 7;
-    aa.b = tt.b = 12;
-    aa.c = tt.c = 1;
+    aa1.a = tt.a = 7;
+    aa1.b = tt.b = 12;
+    aa1.c = tt.c = 1;
 #endif
 
     printf("tt.a = %d, tt.b = %d, tt.c = %d\n", tt.a, tt.b, tt.c);
-    printf("aa.a = %d, aa.b = %d, aa.c = %d\n", aa.a, aa.b, aa.c);
+    printf("aa1.a = %d, aa1.b = %d, aa1.c = %d\n\n", aa1.a, aa1.b, aa1.c);
 
+
+
+    aa1.a = tt.a = 7;
+    aa1.b = tt.b = 12;
+    aa1.c = tt.c = 2;
+
+    printf("tt.a = %d, tt.b = %d, tt.c = %d\n", tt.a, tt.b, tt.c);
+    printf("aa1.a = %d, aa1.b = %d, aa1.c = %d\n", aa1.a, aa1.b, aa1.c);
     return 0;
 }
 

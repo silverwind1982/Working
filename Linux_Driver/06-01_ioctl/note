@@ -1,0 +1,13 @@
+1, Set rules
+    $ mv 51-devone.rules /lib/udev/rules.d/51-devone.rules
+
+2, Insert kernel module:
+    $ make
+    $ sudo insmod sample.ko
+    $ cat /sys/class/devone/devone0/uevent
+
+3, Execute user application to access the device node:
+    $ ./myprog
+    $ sudo ./myprog
+    $ hexdump -C -n 16 /dev/devone0
+

@@ -13,15 +13,19 @@ square_by_echo_and_return() {
     return 3
 }
 
-square_by_return ${1}
+if [ -n ${1} ]; then
+   integer=15
+fi
+
+square_by_return ${integer}
 echo "return answer = $?"
 
 
-answer=$(square_by_echo ${1})
+answer=$(square_by_echo ${integer})
 echo "echo answer = ${answer}"
 
 
-answer=$(square_by_echo_and_return ${1})
+answer=$(square_by_echo_and_return ${integer})
 echo "$?"
 echo "echo answer = ${answer}"
 

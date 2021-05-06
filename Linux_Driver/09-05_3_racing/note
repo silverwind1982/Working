@@ -1,0 +1,20 @@
+0, Related files:
+    $ vim Makefile hello.c note
+
+1, Insert kernel module:
+    $ make
+	$ sudo dmesg -C
+    $ sudo insmod xyz.ko
+        driver (major 238) loaded
+    $ sudo mknod /dev/devone c 238 0
+    $ hexdump -C -n 16 /dev/devone
+	$ sudo dmesg
+    $ sudo rmmod xyz
+	$ sudo dmesg
+    $ sudo insmod xyz.ko timeout_value=3 irq_value=10
+        driver (major 238) loaded
+    $ sudo mknod /dev/devone c 238 0
+    $ hexdump -C -n 16 /dev/devone
+	$ sudo dmesg
+    $ sudo rmmod xyz
+	$ sudo dmesg

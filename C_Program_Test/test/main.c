@@ -1,16 +1,21 @@
 #include <stdio.h>
 
+void swap(int *a, int *b)
+{
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
 int main(int argc, char* argv[]) {
 
-    int i = 2782, j;
+    int a = 123, b = 456;
 
-    if (argc > 1) {
-    }
+    printf("a = %d, b = %d\n", a, b);
 
-    for (j = 20; j < 50; ++j) {
-        printf("%d, %d\n", j, j*i);
-    }
+    swap(&a, &b);
 
+    printf("a = %d, b = %d\n", a, b);
 
     return 0;
 }

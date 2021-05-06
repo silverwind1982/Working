@@ -1,3 +1,6 @@
+0, Related files:
+    $ vim Makefile hello.c simple.c note
+
 1, Insert kernel module:
     $ make
     $ sudo insmod sample.ko

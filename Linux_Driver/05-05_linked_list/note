@@ -1,0 +1,8 @@
+0, Related files:
+    $ vim Makefile main.c note
+
+1, Insert kernel module:
+    $ make
+    $ sudo dmesg -C
+    $ sudo insmod linkedlist.ko
+    $ sudo dmesg

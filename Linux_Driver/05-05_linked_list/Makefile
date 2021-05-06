@@ -1,6 +1,6 @@
-obj-m := linkedlist.o
-
 CFILES := main.c
+
+obj-m := linkedlist.o
 
 linkedlist-objs := $(CFILES:.c=.o)
 

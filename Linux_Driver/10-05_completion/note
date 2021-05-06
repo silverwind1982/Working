@@ -1,0 +1,10 @@
+0, Related files:
+    $ vim Makefile main.c note
+      // this example is not good, refer to kernel_thread example instead
+
+1, Insert kernel module:
+    $ make
+    $ sudo dmesg -C
+    $ sudo insmod xyz.ko
+    $ sudo rmmod xyz
+    $ dmesg

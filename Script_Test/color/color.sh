@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-Black="\033[0;30m"        # Black
+Black="\033[1;30m"        # Black
 Red="\033[0;31m"          # Red
 Green="\033[1;32m"        # Green
 Yellow="\033[0;33m"       # Yellow
@@ -27,6 +27,10 @@ function print_warning () {
 
 function print_title () {
         echo -e ${Purple}$1${NC}
+}
+
+function print_orange () {
+        echo -e ${Yellow}$1${NC}
 }
 
 print_info "${0}"

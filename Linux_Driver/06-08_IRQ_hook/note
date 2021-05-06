@@ -1,0 +1,10 @@
+0, Related files:
+    $ vim Makefile main.c note
+
+1, Insert kernel module:
+    $ make
+    $ sudo insmod sample.ko
+    $ cat /proc/interrupts | grep -w 16
+    $ sudo rmmod sample
+    $ cat /proc/interrupts | grep -w 16
+	$ sudo dmesg

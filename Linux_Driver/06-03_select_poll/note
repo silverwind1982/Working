@@ -1,0 +1,18 @@
+0, Related files
+    $ vim Makefile hello.c simple_read.c non_blocking_read.c select_read.c poll_read.c note 51-devone.rules
+
+1, Set rules
+    $ mv 51-devone.rules /lib/udev/rules.d/51-devone.rules
+
+2, Insert kernel module:
+    $ make
+    $ sudo insmod sample.ko
+    $ cat /sys/class/devone/devone0/uevent
+
+3, Execute user application to access the device node:
+    $ ./simple_read
+    $ ./non_blocking_read
+        the above command is not run as expected, it's still blocked
+    $ ./select_read
+    $ ./poll_read
+

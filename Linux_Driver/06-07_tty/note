@@ -1,0 +1,9 @@
+0, Related files:
+    $ vim Makefile main.c note
+
+1, Insert kernel module:
+    $ make
+	$ sudo dmesg -C
+    $ sudo insmod sample1.ko
+    $ sudo rmmod sample1
+	$ sudo dmesg
